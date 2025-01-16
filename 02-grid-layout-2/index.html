@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Holy Grail</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: repeat(4, 1fr); /* каждая строка равной высоты, за исключением третьей */
+            grid-template-rows: 1fr 1fr 5fr 1fr; /* третья строка больше других */
+            gap: 15px; /* расстояние между элементами */
+        }
+    </style>
+</head>
+<body class="h-full m-0 bg-gray-100">
+    <div class="container p-4 box-border">
+        <div class="header bg-[#006157] text-white text-center text-3xl p-6 rounded-lg shadow-lg col-span-2">Header</div>
+        <div class="sidebar bg-[#005B94] text-white text-center text-xl p-6 rounded-lg shadow-lg row-span-3">Sidebar</div>
+        <div class="nav bg-[#642cde] text-white text-center text-xl p-4 rounded-lg shadow-lg">Nav</div>
+        <div class="article bg-[#7E1DC3] text-white text-center font-bold text-xl p-4 rounded-lg shadow-lg col-span-1">
+            <h2 class="text-2xl mb-4">Article</h2>
+            <p class="text-lg font-sans text-center mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p class="text-lg font-sans text-center mb-2">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur bibendum turpis quis interdum semper.</p>
+            <p class="text-lg font-sans text-center">Cras ut ex in nibh accumsan ullamcorper. Fusce rutrum, metus id porta porttitor, leo ipsum congue velit, eu hendrerit lectus nisi a odio.</p>
+        </div>
+        <div class="footer bg-[#393f4d] text-white text-center font-bold text-3xl p-6 rounded-lg shadow-lg col-span-2">Footer</div>
+    </div>
+</body>
+</html>
